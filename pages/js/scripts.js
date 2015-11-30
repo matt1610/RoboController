@@ -11,6 +11,8 @@ var socket = io.connect();
         socket.on('news', function (data) {
           console.log(data);
           $scope.Message = data.message;
+          $scope.$apply();
+          console.log($scope.Message);
           // socket.emit('my other event', { my: 'data' });
         });
 
