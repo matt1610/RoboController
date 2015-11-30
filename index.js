@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors());
 
-server.listen(8080);
+server.listen(process.env.PORT || 8080);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
