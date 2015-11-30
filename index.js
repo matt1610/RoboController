@@ -26,7 +26,8 @@ app.use(cors());
 server.listen(process.env.PORT || 8080);
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+	console.log('test');
+  	// res.sendfile(__dirname + '/index.html');
 });
 
 app.get('/set', function (req, res) {

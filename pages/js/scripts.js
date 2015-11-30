@@ -5,9 +5,12 @@ var socket = io.connect();
     var RoboClient = angular.module('RoboClient', [])
 
     .controller('MainCtrl', function( $scope ) {
+
+    	$scope.Message = 'Hang On';
       
         socket.on('news', function (data) {
           console.log(data);
+          $scope.Message = data.message;
           // socket.emit('my other event', { my: 'data' });
         });
 
