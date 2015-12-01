@@ -20,7 +20,7 @@
  
 <body ng-controller="MainCtrl">
 
-  <p ng-repeat="message in Message">{{message}}</p>
+  <p ng-repeat="message in Message track by $index">{{$index}}{{message}}</p>
  
 </body>
  
