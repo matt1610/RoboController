@@ -6,11 +6,11 @@ var socket = io.connect();
 
     .controller('MainCtrl', function( $scope ) {
 
-    	$scope.Message = 'Hang On';
+    	$scope.Message = ['Hang On'];
       
         socket.on('news', function (data) {
           console.log(data);
-          $scope.Message = data.message;
+          $scope.Message.push(data.message);
           $scope.$apply();
           console.log($scope.Message);
           // socket.emit('my other event', { my: 'data' });
